@@ -22,5 +22,13 @@ def towerBuilder(n_floors)
     return array
 end
 
+def towerBuilder_Best_Pratice(n)
+    (1..n).map do |i|
+        space = ' ' * (n - i)
+        stars = '*' * (i * 2 - 1)
+        space + stars + space
+    end
+end
+
 n_floors = gets.to_i
 puts towerBuilder(n_floors)
